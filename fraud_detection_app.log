@@ -1,0 +1,325 @@
+2025-04-06 12:39:36,306 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-06 12:39:36,306 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 12:39:36,309 - INFO -  * Restarting with stat
+2025-04-06 12:39:37,535 - WARNING -  * Debugger is active!
+2025-04-06 12:39:37,542 - INFO -  * Debugger PIN: 222-173-523
+2025-04-06 12:40:13,583 - INFO - 127.0.0.1 - - [06/Apr/2025 12:40:13] "GET / HTTP/1.1" 200 -
+2025-04-06 12:40:18,840 - INFO - [20250406124018840041] New prediction request received
+2025-04-06 12:40:18,842 - INFO - [20250406124018840041] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:40:18,842 - INFO - [20250406124018840041] Selected threshold 'f1': 0.45000000000000007
+2025-04-06 12:40:18,842 - INFO - [20250406124018840041] Raw features (first 5): [ 0.32  0.43  0.29 -0.15  0.08]
+2025-04-06 12:40:18,844 - INFO - [20250406124018840041] Scaled features (first 5): [-1.23400212  0.27654323  0.21280316 -0.11714507  0.06463294]
+2025-04-06 12:40:18,854 - INFO - [20250406124018840041] Original fraud probability: 0.0004
+2025-04-06 12:40:18,854 - INFO - [20250406124018840041] Adjusted fraud probability (x3.0): 0.0011
+2025-04-06 12:40:18,854 - INFO - [20250406124018840041] Final prediction: 0, Using threshold: 0.45000000000000007
+2025-04-06 12:40:18,874 - ERROR - [20250406124018840041] Unhandled error: 'dict object' has no attribute 'fraud_probability'
+2025-04-06 12:40:18,875 - INFO - 127.0.0.1 - - [06/Apr/2025 12:40:18] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-04-06 12:40:30,319 - INFO - [20250406124030318297] New prediction request received
+2025-04-06 12:40:30,319 - INFO - [20250406124030318297] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:40:30,319 - INFO - [20250406124030318297] Selected threshold 'f1': 0.45000000000000007
+2025-04-06 12:40:30,319 - INFO - [20250406124030318297] Raw features (first 5): [-10.16   8.28  -4.34   6.49   3.85]
+2025-04-06 12:40:30,320 - INFO - [20250406124030318297] Scaled features (first 5): [-1.23407036  5.33126115 -3.20028968  5.04916206  3.13898662]
+2025-04-06 12:40:30,324 - INFO - [20250406124030318297] Original fraud probability: 0.0486
+2025-04-06 12:40:30,324 - INFO - [20250406124030318297] Adjusted fraud probability (x3.0): 0.1459
+2025-04-06 12:40:30,324 - INFO - [20250406124030318297] Final prediction: 0, Using threshold: 0.45000000000000007
+2025-04-06 12:40:30,325 - ERROR - [20250406124030318297] Unhandled error: 'dict object' has no attribute 'fraud_probability'
+2025-04-06 12:40:30,325 - INFO - 127.0.0.1 - - [06/Apr/2025 12:40:30] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-04-06 12:44:08,830 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-06 12:44:08,830 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 12:44:08,832 - INFO -  * Restarting with stat
+2025-04-06 12:44:10,014 - WARNING -  * Debugger is active!
+2025-04-06 12:44:10,020 - INFO -  * Debugger PIN: 222-173-523
+2025-04-06 12:44:15,042 - INFO - 127.0.0.1 - - [06/Apr/2025 12:44:15] "GET / HTTP/1.1" 200 -
+2025-04-06 12:44:18,425 - INFO - [20250406124418425194] New prediction request received
+2025-04-06 12:44:18,428 - INFO - [20250406124418425194] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:44:18,428 - INFO - [20250406124418425194] Selected threshold 'f1': 0.45000000000000007
+2025-04-06 12:44:18,428 - INFO - [20250406124418425194] Raw features (first 5): [ 0.32  0.43  0.29 -0.15  0.08]
+2025-04-06 12:44:18,429 - INFO - [20250406124418425194] Scaled features (first 5): [-1.23400212  0.27654323  0.21280316 -0.11714507  0.06463294]
+2025-04-06 12:44:18,433 - INFO - [20250406124418425194] Original fraud probability: 0.0004
+2025-04-06 12:44:18,433 - INFO - [20250406124418425194] Adjusted fraud probability (x3.0): 0.0011
+2025-04-06 12:44:18,433 - INFO - [20250406124418425194] Final prediction: 0, Using threshold: 0.45000000000000007
+2025-04-06 12:44:18,447 - INFO - 127.0.0.1 - - [06/Apr/2025 12:44:18] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:44:25,807 - INFO - 127.0.0.1 - - [06/Apr/2025 12:44:25] "GET / HTTP/1.1" 200 -
+2025-04-06 12:44:29,623 - INFO - [20250406124429623090] New prediction request received
+2025-04-06 12:44:29,624 - INFO - [20250406124429623090] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:44:29,624 - INFO - [20250406124429623090] Selected threshold 'f1': 0.45000000000000007
+2025-04-06 12:44:29,624 - INFO - [20250406124429623090] Raw features (first 5): [-10.16   8.28  -4.34   6.49   3.85]
+2025-04-06 12:44:29,624 - INFO - [20250406124429623090] Scaled features (first 5): [-1.23407036  5.33126115 -3.20028968  5.04916206  3.13898662]
+2025-04-06 12:44:29,628 - INFO - [20250406124429623090] Original fraud probability: 0.0486
+2025-04-06 12:44:29,628 - INFO - [20250406124429623090] Adjusted fraud probability (x3.0): 0.1459
+2025-04-06 12:44:29,628 - INFO - [20250406124429623090] Final prediction: 0, Using threshold: 0.45000000000000007
+2025-04-06 12:44:29,629 - INFO - 127.0.0.1 - - [06/Apr/2025 12:44:29] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:44:40,165 - INFO - 127.0.0.1 - - [06/Apr/2025 12:44:40] "GET / HTTP/1.1" 200 -
+2025-04-06 12:44:44,384 - INFO - [20250406124444384784] New prediction request received
+2025-04-06 12:44:44,384 - INFO - [20250406124444384784] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:44:44,384 - INFO - [20250406124444384784] Selected threshold 'f1': 0.45000000000000007
+2025-04-06 12:44:44,385 - INFO - [20250406124444384784] Raw features (first 5): [-1.2   0.47 -0.65  1.21  0.83]
+2025-04-06 12:44:44,385 - INFO - [20250406124444384784] Scaled features (first 5): [-1.23401201  0.30229976 -0.48013577  0.94101422  0.67624176]
+2025-04-06 12:44:44,390 - INFO - [20250406124444384784] Original fraud probability: 0.0003
+2025-04-06 12:44:44,391 - INFO - [20250406124444384784] Adjusted fraud probability (x3.0): 0.0009
+2025-04-06 12:44:44,391 - INFO - [20250406124444384784] Final prediction: 0, Using threshold: 0.45000000000000007
+2025-04-06 12:44:44,391 - INFO - 127.0.0.1 - - [06/Apr/2025 12:44:44] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:44:47,764 - INFO - 127.0.0.1 - - [06/Apr/2025 12:44:47] "GET / HTTP/1.1" 200 -
+2025-04-06 12:44:51,062 - INFO - [20250406124451062083] New prediction request received
+2025-04-06 12:44:51,062 - INFO - [20250406124451062083] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:44:51,063 - INFO - [20250406124451062083] Selected threshold 'f1': 0.45000000000000007
+2025-04-06 12:44:51,063 - INFO - [20250406124451062083] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:44:51,063 - INFO - [20250406124451062083] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:44:51,067 - INFO - [20250406124451062083] Original fraud probability: 0.0864
+2025-04-06 12:44:51,067 - INFO - [20250406124451062083] Adjusted fraud probability (x3.0): 0.2593
+2025-04-06 12:44:51,067 - INFO - [20250406124451062083] Final prediction: 0, Using threshold: 0.45000000000000007
+2025-04-06 12:44:51,068 - INFO - 127.0.0.1 - - [06/Apr/2025 12:44:51] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:46:17,180 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\Credit_Card_Fraud\\app.py', reloading
+2025-04-06 12:46:17,328 - INFO -  * Restarting with stat
+2025-04-06 12:46:18,476 - WARNING -  * Debugger is active!
+2025-04-06 12:46:18,482 - INFO -  * Debugger PIN: 222-173-523
+2025-04-06 12:46:18,926 - INFO - 127.0.0.1 - - [06/Apr/2025 12:46:18] "GET / HTTP/1.1" 200 -
+2025-04-06 12:46:21,953 - INFO - [20250406124621953354] New prediction request received
+2025-04-06 12:46:21,954 - INFO - [20250406124621953354] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:46:21,954 - INFO - [20250406124621953354] Selected threshold 'f1': 0.45000000000000007
+2025-04-06 12:46:21,954 - INFO - [20250406124621953354] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:46:21,956 - INFO - [20250406124621953354] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:46:21,959 - INFO - [20250406124621953354] Original fraud probability: 0.0864
+2025-04-06 12:46:21,959 - INFO - [20250406124621953354] Adjusted fraud probability (x5.0): 0.4322
+2025-04-06 12:46:21,959 - INFO - [20250406124621953354] Final prediction: 0, Using threshold: 0.45000000000000007
+2025-04-06 12:46:21,973 - INFO - 127.0.0.1 - - [06/Apr/2025 12:46:21] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:46:27,720 - INFO - [20250406124627720218] New prediction request received
+2025-04-06 12:46:27,721 - INFO - [20250406124627720218] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:46:27,721 - INFO - [20250406124627720218] Selected threshold 'f1': 0.45000000000000007
+2025-04-06 12:46:27,721 - INFO - [20250406124627720218] Raw features (first 5): [-10.16   8.28  -4.34   6.49   3.85]
+2025-04-06 12:46:27,721 - INFO - [20250406124627720218] Scaled features (first 5): [-1.23407036  5.33126115 -3.20028968  5.04916206  3.13898662]
+2025-04-06 12:46:27,725 - INFO - [20250406124627720218] Original fraud probability: 0.0486
+2025-04-06 12:46:27,725 - INFO - [20250406124627720218] Adjusted fraud probability (x5.0): 0.2432
+2025-04-06 12:46:27,725 - INFO - [20250406124627720218] Final prediction: 0, Using threshold: 0.45000000000000007
+2025-04-06 12:46:27,725 - INFO - 127.0.0.1 - - [06/Apr/2025 12:46:27] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:46:29,038 - INFO - 127.0.0.1 - - [06/Apr/2025 12:46:29] "GET / HTTP/1.1" 200 -
+2025-04-06 12:46:32,427 - INFO - [20250406124632427796] New prediction request received
+2025-04-06 12:46:32,427 - INFO - [20250406124632427796] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:46:32,427 - INFO - [20250406124632427796] Selected threshold 'conservative': 0.01
+2025-04-06 12:46:32,427 - INFO - [20250406124632427796] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:46:32,428 - INFO - [20250406124632427796] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:46:32,432 - INFO - [20250406124632427796] Original fraud probability: 0.0864
+2025-04-06 12:46:32,432 - INFO - [20250406124632427796] Adjusted fraud probability (x5.0): 0.4322
+2025-04-06 12:46:32,432 - INFO - [20250406124632427796] Direct threshold applied: 0.01, Result: 1
+2025-04-06 12:46:32,432 - INFO - [20250406124632427796] Final prediction: 1, Using threshold: 0.01
+2025-04-06 12:46:32,432 - INFO - 127.0.0.1 - - [06/Apr/2025 12:46:32] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:46:51,291 - INFO - [20250406124651291086] New prediction request received
+2025-04-06 12:46:51,291 - INFO - [20250406124651291086] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:46:51,291 - INFO - [20250406124651291086] Selected threshold 'conservative': 0.01
+2025-04-06 12:46:51,291 - INFO - [20250406124651291086] Raw features (first 5): [ 0.32  0.43  0.29 -0.15  0.08]
+2025-04-06 12:46:51,292 - INFO - [20250406124651291086] Scaled features (first 5): [-1.23400212  0.27654323  0.21280316 -0.11714507  0.06463294]
+2025-04-06 12:46:51,296 - INFO - [20250406124651291086] Original fraud probability: 0.0004
+2025-04-06 12:46:51,296 - INFO - [20250406124651291086] Adjusted fraud probability (x5.0): 0.0018
+2025-04-06 12:46:51,296 - INFO - [20250406124651291086] Direct threshold applied: 0.01, Result: 0
+2025-04-06 12:46:51,296 - INFO - [20250406124651291086] Final prediction: 0, Using threshold: 0.01
+2025-04-06 12:46:51,296 - INFO - 127.0.0.1 - - [06/Apr/2025 12:46:51] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:46:55,687 - INFO - [20250406124655687143] New prediction request received
+2025-04-06 12:46:55,687 - INFO - [20250406124655687143] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:46:55,688 - INFO - [20250406124655687143] Selected threshold 'conservative': 0.01
+2025-04-06 12:46:55,688 - INFO - [20250406124655687143] Raw features (first 5): [-10.16   8.28  -4.34   6.49   3.85]
+2025-04-06 12:46:55,688 - INFO - [20250406124655687143] Scaled features (first 5): [-1.23407036  5.33126115 -3.20028968  5.04916206  3.13898662]
+2025-04-06 12:46:55,692 - INFO - [20250406124655687143] Original fraud probability: 0.0486
+2025-04-06 12:46:55,692 - INFO - [20250406124655687143] Adjusted fraud probability (x5.0): 0.2432
+2025-04-06 12:46:55,692 - INFO - [20250406124655687143] Direct threshold applied: 0.01, Result: 1
+2025-04-06 12:46:55,692 - INFO - [20250406124655687143] Final prediction: 1, Using threshold: 0.01
+2025-04-06 12:46:55,693 - INFO - 127.0.0.1 - - [06/Apr/2025 12:46:55] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:47:09,905 - INFO - 127.0.0.1 - - [06/Apr/2025 12:47:09] "GET / HTTP/1.1" 200 -
+2025-04-06 12:47:13,520 - INFO - [20250406124713520247] New prediction request received
+2025-04-06 12:47:13,521 - INFO - [20250406124713520247] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:47:13,521 - INFO - [20250406124713520247] Selected threshold 'f1': 0.45000000000000007
+2025-04-06 12:47:13,521 - INFO - [20250406124713520247] Raw features (first 5): [-1.2   0.47 -0.65  1.21  0.83]
+2025-04-06 12:47:13,521 - INFO - [20250406124713520247] Scaled features (first 5): [-1.23401201  0.30229976 -0.48013577  0.94101422  0.67624176]
+2025-04-06 12:47:13,526 - INFO - [20250406124713520247] Original fraud probability: 0.0003
+2025-04-06 12:47:13,526 - INFO - [20250406124713520247] Adjusted fraud probability (x5.0): 0.0015
+2025-04-06 12:47:13,526 - INFO - [20250406124713520247] Final prediction: 0, Using threshold: 0.45000000000000007
+2025-04-06 12:47:13,526 - INFO - 127.0.0.1 - - [06/Apr/2025 12:47:13] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:47:15,516 - INFO - 127.0.0.1 - - [06/Apr/2025 12:47:15] "GET / HTTP/1.1" 200 -
+2025-04-06 12:47:19,606 - INFO - [20250406124719606384] New prediction request received
+2025-04-06 12:47:19,606 - INFO - [20250406124719606384] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:47:19,606 - INFO - [20250406124719606384] Selected threshold 'conservative': 0.01
+2025-04-06 12:47:19,606 - INFO - [20250406124719606384] Raw features (first 5): [-1.2   0.47 -0.65  1.21  0.83]
+2025-04-06 12:47:19,607 - INFO - [20250406124719606384] Scaled features (first 5): [-1.23401201  0.30229976 -0.48013577  0.94101422  0.67624176]
+2025-04-06 12:47:19,611 - INFO - [20250406124719606384] Original fraud probability: 0.0003
+2025-04-06 12:47:19,611 - INFO - [20250406124719606384] Adjusted fraud probability (x5.0): 0.0015
+2025-04-06 12:47:19,611 - INFO - [20250406124719606384] Direct threshold applied: 0.01, Result: 0
+2025-04-06 12:47:19,611 - INFO - [20250406124719606384] Final prediction: 0, Using threshold: 0.01
+2025-04-06 12:47:19,611 - INFO - 127.0.0.1 - - [06/Apr/2025 12:47:19] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:47:22,191 - INFO - 127.0.0.1 - - [06/Apr/2025 12:47:22] "GET / HTTP/1.1" 200 -
+2025-04-06 12:47:52,558 - INFO - [20250406124752558066] New prediction request received
+2025-04-06 12:47:52,558 - INFO - [20250406124752558066] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:47:52,558 - INFO - [20250406124752558066] Selected threshold 'f1': 0.45000000000000007
+2025-04-06 12:47:52,558 - INFO - [20250406124752558066] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:47:52,559 - INFO - [20250406124752558066] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:47:52,563 - INFO - [20250406124752558066] Original fraud probability: 0.0864
+2025-04-06 12:47:52,563 - INFO - [20250406124752558066] Adjusted fraud probability (x5.0): 0.4322
+2025-04-06 12:47:52,563 - INFO - [20250406124752558066] Final prediction: 0, Using threshold: 0.45000000000000007
+2025-04-06 12:47:52,564 - INFO - 127.0.0.1 - - [06/Apr/2025 12:47:52] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:47:59,894 - INFO - [20250406124759894958] New prediction request received
+2025-04-06 12:47:59,895 - INFO - [20250406124759894958] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:47:59,895 - INFO - [20250406124759894958] Selected threshold 'gmean': 0.343493226511447
+2025-04-06 12:47:59,895 - INFO - [20250406124759894958] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:47:59,895 - INFO - [20250406124759894958] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:47:59,900 - INFO - [20250406124759894958] Original fraud probability: 0.0864
+2025-04-06 12:47:59,900 - INFO - [20250406124759894958] Adjusted fraud probability (x5.0): 0.4322
+2025-04-06 12:47:59,900 - INFO - [20250406124759894958] Final prediction: 1, Using threshold: 0.343493226511447
+2025-04-06 12:47:59,901 - INFO - 127.0.0.1 - - [06/Apr/2025 12:47:59] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:48:06,291 - INFO - [20250406124806291591] New prediction request received
+2025-04-06 12:48:06,291 - INFO - [20250406124806291591] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:48:06,291 - INFO - [20250406124806291591] Selected threshold 'balanced': 0.5
+2025-04-06 12:48:06,291 - INFO - [20250406124806291591] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:48:06,292 - INFO - [20250406124806291591] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:48:06,295 - INFO - [20250406124806291591] Original fraud probability: 0.0864
+2025-04-06 12:48:06,295 - INFO - [20250406124806291591] Adjusted fraud probability (x5.0): 0.4322
+2025-04-06 12:48:06,295 - INFO - [20250406124806291591] Final prediction: 0, Using threshold: 0.5
+2025-04-06 12:48:06,296 - INFO - 127.0.0.1 - - [06/Apr/2025 12:48:06] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:48:11,831 - INFO - [20250406124811831766] New prediction request received
+2025-04-06 12:48:11,833 - INFO - [20250406124811831766] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:48:11,833 - INFO - [20250406124811831766] Selected threshold 'f1': 0.45000000000000007
+2025-04-06 12:48:11,833 - INFO - [20250406124811831766] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:48:11,833 - INFO - [20250406124811831766] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:48:11,837 - INFO - [20250406124811831766] Original fraud probability: 0.0864
+2025-04-06 12:48:11,837 - INFO - [20250406124811831766] Adjusted fraud probability (x5.0): 0.4322
+2025-04-06 12:48:11,837 - INFO - [20250406124811831766] Final prediction: 0, Using threshold: 0.45000000000000007
+2025-04-06 12:48:11,838 - INFO - 127.0.0.1 - - [06/Apr/2025 12:48:11] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:48:14,377 - INFO - [20250406124814377804] New prediction request received
+2025-04-06 12:48:14,377 - INFO - [20250406124814377804] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:48:14,377 - INFO - [20250406124814377804] Selected threshold 'gmean': 0.343493226511447
+2025-04-06 12:48:14,377 - INFO - [20250406124814377804] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:48:14,378 - INFO - [20250406124814377804] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:48:14,381 - INFO - [20250406124814377804] Original fraud probability: 0.0864
+2025-04-06 12:48:14,381 - INFO - [20250406124814377804] Adjusted fraud probability (x5.0): 0.4322
+2025-04-06 12:48:14,381 - INFO - [20250406124814377804] Final prediction: 1, Using threshold: 0.343493226511447
+2025-04-06 12:48:14,382 - INFO - 127.0.0.1 - - [06/Apr/2025 12:48:14] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:48:17,256 - INFO - [20250406124817256265] New prediction request received
+2025-04-06 12:48:17,257 - INFO - [20250406124817256265] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:48:17,257 - INFO - [20250406124817256265] Selected threshold 'conservative': 0.01
+2025-04-06 12:48:17,257 - INFO - [20250406124817256265] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:48:17,257 - INFO - [20250406124817256265] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:48:17,261 - INFO - [20250406124817256265] Original fraud probability: 0.0864
+2025-04-06 12:48:17,261 - INFO - [20250406124817256265] Adjusted fraud probability (x5.0): 0.4322
+2025-04-06 12:48:17,261 - INFO - [20250406124817256265] Direct threshold applied: 0.01, Result: 1
+2025-04-06 12:48:17,261 - INFO - [20250406124817256265] Final prediction: 1, Using threshold: 0.01
+2025-04-06 12:48:17,262 - INFO - 127.0.0.1 - - [06/Apr/2025 12:48:17] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:48:23,999 - INFO - [20250406124823999520] New prediction request received
+2025-04-06 12:48:23,999 - INFO - [20250406124823999520] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:48:23,999 - INFO - [20250406124823999520] Selected threshold 'conservative': 0.01
+2025-04-06 12:48:24,000 - INFO - [20250406124823999520] Raw features (first 5): [-10.16   8.28  -4.34   6.49   3.85]
+2025-04-06 12:48:24,000 - INFO - [20250406124823999520] Scaled features (first 5): [-1.23407036  5.33126115 -3.20028968  5.04916206  3.13898662]
+2025-04-06 12:48:24,004 - INFO - [20250406124823999520] Original fraud probability: 0.0486
+2025-04-06 12:48:24,004 - INFO - [20250406124823999520] Adjusted fraud probability (x5.0): 0.2432
+2025-04-06 12:48:24,004 - INFO - [20250406124823999520] Direct threshold applied: 0.01, Result: 1
+2025-04-06 12:48:24,004 - INFO - [20250406124823999520] Final prediction: 1, Using threshold: 0.01
+2025-04-06 12:48:24,004 - INFO - 127.0.0.1 - - [06/Apr/2025 12:48:24] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:48:26,896 - INFO - [20250406124826896110] New prediction request received
+2025-04-06 12:48:26,896 - INFO - [20250406124826896110] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:48:26,897 - INFO - [20250406124826896110] Selected threshold 'gmean': 0.343493226511447
+2025-04-06 12:48:26,897 - INFO - [20250406124826896110] Raw features (first 5): [-10.16   8.28  -4.34   6.49   3.85]
+2025-04-06 12:48:26,897 - INFO - [20250406124826896110] Scaled features (first 5): [-1.23407036  5.33126115 -3.20028968  5.04916206  3.13898662]
+2025-04-06 12:48:26,900 - INFO - [20250406124826896110] Original fraud probability: 0.0486
+2025-04-06 12:48:26,900 - INFO - [20250406124826896110] Adjusted fraud probability (x5.0): 0.2432
+2025-04-06 12:48:26,900 - INFO - [20250406124826896110] Final prediction: 0, Using threshold: 0.343493226511447
+2025-04-06 12:48:26,901 - INFO - 127.0.0.1 - - [06/Apr/2025 12:48:26] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:48:41,828 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\Credit_Card_Fraud\\app.py', reloading
+2025-04-06 12:48:41,969 - INFO -  * Restarting with stat
+2025-04-06 12:48:43,160 - WARNING -  * Debugger is active!
+2025-04-06 12:48:43,166 - INFO -  * Debugger PIN: 222-173-523
+2025-04-06 12:48:44,841 - INFO - 127.0.0.1 - - [06/Apr/2025 12:48:44] "GET / HTTP/1.1" 200 -
+2025-04-06 12:48:51,357 - INFO - [20250406124851357634] New prediction request received
+2025-04-06 12:48:51,358 - INFO - [20250406124851357634] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:48:51,358 - INFO - [20250406124851357634] Selected threshold 'balanced': 0.5
+2025-04-06 12:48:51,358 - INFO - [20250406124851357634] Raw features (first 5): [ 0.32  0.43  0.29 -0.15  0.08]
+2025-04-06 12:48:51,359 - INFO - [20250406124851357634] Scaled features (first 5): [-1.23400212  0.27654323  0.21280316 -0.11714507  0.06463294]
+2025-04-06 12:48:51,363 - INFO - [20250406124851357634] Original fraud probability: 0.0004
+2025-04-06 12:48:51,363 - INFO - [20250406124851357634] Adjusted fraud probability (x10.0): 0.0036
+2025-04-06 12:48:51,363 - INFO - [20250406124851357634] Final prediction: 0, Using threshold: 0.5
+2025-04-06 12:48:51,376 - INFO - 127.0.0.1 - - [06/Apr/2025 12:48:51] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:48:54,519 - INFO - 127.0.0.1 - - [06/Apr/2025 12:48:54] "GET / HTTP/1.1" 200 -
+2025-04-06 12:49:00,614 - INFO - [20250406124900614959] New prediction request received
+2025-04-06 12:49:00,614 - INFO - [20250406124900614959] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:49:00,614 - INFO - [20250406124900614959] Selected threshold 'balanced': 0.5
+2025-04-06 12:49:00,614 - INFO - [20250406124900614959] Raw features (first 5): [-10.16   8.28  -4.34   6.49   3.85]
+2025-04-06 12:49:00,615 - INFO - [20250406124900614959] Scaled features (first 5): [-1.23407036  5.33126115 -3.20028968  5.04916206  3.13898662]
+2025-04-06 12:49:00,620 - INFO - [20250406124900614959] Original fraud probability: 0.0486
+2025-04-06 12:49:00,620 - INFO - [20250406124900614959] Adjusted fraud probability (x10.0): 0.4863
+2025-04-06 12:49:00,620 - INFO - [20250406124900614959] Final prediction: 0, Using threshold: 0.5
+2025-04-06 12:49:00,620 - INFO - 127.0.0.1 - - [06/Apr/2025 12:49:00] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:49:29,736 - INFO - [20250406124929736962] New prediction request received
+2025-04-06 12:49:29,737 - INFO - [20250406124929736962] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:49:29,737 - INFO - [20250406124929736962] Selected threshold 'balanced': 0.5
+2025-04-06 12:49:29,737 - INFO - [20250406124929736962] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:49:29,737 - INFO - [20250406124929736962] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:49:29,742 - INFO - [20250406124929736962] Original fraud probability: 0.0864
+2025-04-06 12:49:29,742 - INFO - [20250406124929736962] Adjusted fraud probability (x10.0): 0.8643
+2025-04-06 12:49:29,742 - INFO - [20250406124929736962] Final prediction: 1, Using threshold: 0.5
+2025-04-06 12:49:29,743 - INFO - 127.0.0.1 - - [06/Apr/2025 12:49:29] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:49:42,684 - INFO - [20250406124942684445] New prediction request received
+2025-04-06 12:49:42,684 - INFO - [20250406124942684445] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:49:42,684 - INFO - [20250406124942684445] Selected threshold 'f1': 0.45000000000000007
+2025-04-06 12:49:42,685 - INFO - [20250406124942684445] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:49:42,685 - INFO - [20250406124942684445] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:49:42,689 - INFO - [20250406124942684445] Original fraud probability: 0.0864
+2025-04-06 12:49:42,689 - INFO - [20250406124942684445] Adjusted fraud probability (x10.0): 0.8643
+2025-04-06 12:49:42,689 - INFO - [20250406124942684445] Final prediction: 1, Using threshold: 0.45000000000000007
+2025-04-06 12:49:42,689 - INFO - 127.0.0.1 - - [06/Apr/2025 12:49:42] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:49:52,907 - INFO - [20250406124952907875] New prediction request received
+2025-04-06 12:49:52,907 - INFO - [20250406124952907875] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:49:52,907 - INFO - [20250406124952907875] Selected threshold 'conservative': 0.01
+2025-04-06 12:49:52,907 - INFO - [20250406124952907875] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:49:52,908 - INFO - [20250406124952907875] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:49:52,913 - INFO - [20250406124952907875] Original fraud probability: 0.0864
+2025-04-06 12:49:52,913 - INFO - [20250406124952907875] Adjusted fraud probability (x10.0): 0.8643
+2025-04-06 12:49:52,913 - INFO - [20250406124952907875] Direct threshold applied: 0.01, Result: 1
+2025-04-06 12:49:52,913 - INFO - [20250406124952907875] Final prediction: 1, Using threshold: 0.01
+2025-04-06 12:49:52,913 - INFO - 127.0.0.1 - - [06/Apr/2025 12:49:52] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:49:56,415 - INFO - [20250406124956415202] New prediction request received
+2025-04-06 12:49:56,415 - INFO - [20250406124956415202] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:49:56,415 - INFO - [20250406124956415202] Selected threshold 'gmean': 0.343493226511447
+2025-04-06 12:49:56,415 - INFO - [20250406124956415202] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:49:56,416 - INFO - [20250406124956415202] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:49:56,419 - INFO - [20250406124956415202] Original fraud probability: 0.0864
+2025-04-06 12:49:56,419 - INFO - [20250406124956415202] Adjusted fraud probability (x10.0): 0.8643
+2025-04-06 12:49:56,419 - INFO - [20250406124956415202] Final prediction: 1, Using threshold: 0.343493226511447
+2025-04-06 12:49:56,420 - INFO - 127.0.0.1 - - [06/Apr/2025 12:49:56] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:49:59,226 - INFO - [20250406124959226893] New prediction request received
+2025-04-06 12:49:59,226 - INFO - [20250406124959226893] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:49:59,226 - INFO - [20250406124959226893] Selected threshold 'balanced': 0.5
+2025-04-06 12:49:59,226 - INFO - [20250406124959226893] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:49:59,227 - INFO - [20250406124959226893] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:49:59,231 - INFO - [20250406124959226893] Original fraud probability: 0.0864
+2025-04-06 12:49:59,232 - INFO - [20250406124959226893] Adjusted fraud probability (x10.0): 0.8643
+2025-04-06 12:49:59,232 - INFO - [20250406124959226893] Final prediction: 1, Using threshold: 0.5
+2025-04-06 12:49:59,232 - INFO - 127.0.0.1 - - [06/Apr/2025 12:49:59] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:50:05,513 - INFO - [20250406125005513262] New prediction request received
+2025-04-06 12:50:05,513 - INFO - [20250406125005513262] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:50:05,514 - INFO - [20250406125005513262] Selected threshold 'conservative': 0.01
+2025-04-06 12:50:05,514 - INFO - [20250406125005513262] Raw features (first 5): [ 0.32  0.43  0.29 -0.15  0.08]
+2025-04-06 12:50:05,514 - INFO - [20250406125005513262] Scaled features (first 5): [-1.23400212  0.27654323  0.21280316 -0.11714507  0.06463294]
+2025-04-06 12:50:05,518 - INFO - [20250406125005513262] Original fraud probability: 0.0004
+2025-04-06 12:50:05,518 - INFO - [20250406125005513262] Adjusted fraud probability (x10.0): 0.0036
+2025-04-06 12:50:05,518 - INFO - [20250406125005513262] Direct threshold applied: 0.01, Result: 0
+2025-04-06 12:50:05,518 - INFO - [20250406125005513262] Final prediction: 0, Using threshold: 0.01
+2025-04-06 12:50:05,519 - INFO - 127.0.0.1 - - [06/Apr/2025 12:50:05] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:50:34,589 - INFO - [20250406125034588462] New prediction request received
+2025-04-06 12:50:34,589 - INFO - [20250406125034588462] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:50:34,589 - INFO - [20250406125034588462] Selected threshold 'conservative': 0.01
+2025-04-06 12:50:34,589 - INFO - [20250406125034588462] Raw features (first 5): [ 0.32  0.43  0.29 -0.15  0.08]
+2025-04-06 12:50:34,590 - INFO - [20250406125034588462] Scaled features (first 5): [-1.23400212  0.27654323  0.21280316 -0.11714507  0.06463294]
+2025-04-06 12:50:34,593 - INFO - [20250406125034588462] Original fraud probability: 0.0004
+2025-04-06 12:50:34,593 - INFO - [20250406125034588462] Adjusted fraud probability (x10.0): 0.0036
+2025-04-06 12:50:34,593 - INFO - [20250406125034588462] Direct threshold applied: 0.01, Result: 0
+2025-04-06 12:50:34,593 - INFO - [20250406125034588462] Final prediction: 0, Using threshold: 0.01
+2025-04-06 12:50:34,594 - INFO - 127.0.0.1 - - [06/Apr/2025 12:50:34] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:50:43,899 - INFO - 127.0.0.1 - - [06/Apr/2025 12:50:43] "GET / HTTP/1.1" 200 -
+2025-04-06 12:50:49,821 - INFO - [20250406125049821961] New prediction request received
+2025-04-06 12:50:49,821 - INFO - [20250406125049821961] Threshold options: {'default': 0.5, 'conservative': 0.01, 'gmean': np.float64(0.343493226511447), 'f1': np.float64(0.45000000000000007), 'balanced': 0.5}
+2025-04-06 12:50:49,821 - INFO - [20250406125049821961] Selected threshold 'conservative': 0.01
+2025-04-06 12:50:49,821 - INFO - [20250406125049821961] Raw features (first 5): [-15.24  12.83  -7.16   5.34   8.76]
+2025-04-06 12:50:49,822 - INFO - [20250406125049821961] Scaled features (first 5): [-1.23410344  8.26106581 -5.27910648  4.15439502  7.14298571]
+2025-04-06 12:50:49,826 - INFO - [20250406125049821961] Original fraud probability: 0.0864
+2025-04-06 12:50:49,826 - INFO - [20250406125049821961] Adjusted fraud probability (x10.0): 0.8643
+2025-04-06 12:50:49,826 - INFO - [20250406125049821961] Direct threshold applied: 0.01, Result: 1
+2025-04-06 12:50:49,826 - INFO - [20250406125049821961] Final prediction: 1, Using threshold: 0.01
+2025-04-06 12:50:49,827 - INFO - 127.0.0.1 - - [06/Apr/2025 12:50:49] "POST /predict HTTP/1.1" 200 -
+2025-04-06 12:50:56,228 - INFO - 127.0.0.1 - - [06/Apr/2025 12:50:56] "GET / HTTP/1.1" 200 -
