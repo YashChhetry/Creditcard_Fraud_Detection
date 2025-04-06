@@ -233,4 +233,3 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 ---
 
-Let me know if you want a badge section (build status, license, Python version), Dockerfile instructions, or contribution guidelines added!
