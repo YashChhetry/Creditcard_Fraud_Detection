@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Card Fraud Detection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .feature-container {
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 15px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+        .batch-input {
+            width: 100%;
+            height: 150px;
+        }
+        .tab-content {
+            padding-top: 20px;
+        }
+        .threshold-selector {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        .case-description {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Credit Card Fraud Detection</h1>
+        <p class="lead">Enter the PCA-transformed features to detect fraud</p>
+
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" id="input-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="individual-tab" data-toggle="tab" href="#individual" role="tab">Individual Inputs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="batch-tab" data-toggle="tab" href="#batch" role="tab">Batch Input</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="sample-tab" data-toggle="tab" href="#sample" role="tab">Sample Cases</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="tab-content" id="input-tab-content">
+                    <!-- Individual inputs tab -->
+                    <div class="tab-pane fade show active" id="individual" role="tabpanel">
+                        <form action="/predict" method="post" id="individual-form">
+                            <div class="form-group feature-container">
+                                <div class="row">
+                                    <div class="col-md-4" id="col1"></div>
+                                    <div class="col-md-4" id="col2"></div>
+                                    <div class="col-md-4" id="col3"></div>
+                                </div>
+                            </div>
+
+                            <div class="threshold-selector">
+                                <div class="form-group">
+                                    <label for="threshold_option">Select Detection Sensitivity:</label>
+                                    <select class="form-control" id="threshold_option" name="threshold_option">
+                                        <option value="balanced">Balanced (0.5)</option>
+                                        <option value="f1" selected>Optimal F1 Score</option>
+                                        <option value="gmean">Optimal G-Mean</option>
+                                        <option value="conservative">High Sensitivity (Catch More Fraud)</option>
+                                    </select>
+                                    <small class="form-text text-muted">
+                                        Higher sensitivity will flag more transactions as potentially fraudulent.
+                                    </small>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg mt-3">Predict Fraud</button>
+                        </form>
+                    </div>
+
+                    <!-- Batch input tab -->
+                    <div class="tab-pane fade" id="batch" role="tabpanel">
+                        <form action="/predict" method="post" id="batch-form">
+                            <div class="form-group">
+                                <label for="batch-input">Enter all features (comma separated)</label>
+                                <textarea class="form-control batch-input" id="batch-input"
+                                          placeholder="Enter comma-separated values, e.g.: 0.32, 0.43, 0.29, -0.15, ..."></textarea>
+                            </div>
+                            <div id="batch-hidden-inputs"></div>
+
+                            <div class="threshold-selector">
+                                <div class="form-group">
+                                    <label for="batch_threshold_option">Select Detection Sensitivity:</label>
+                                    <select class="form-control" id="batch_threshold_option" name="threshold_option">
+                                        <option value="balanced">Balanced (0.5)</option>
+                                        <option value="f1" selected>Optimal F1 Score</option>
+                                        <option value="gmean">Optimal G-Mean</option>
+                                        <option value="conservative">High Sensitivity (Catch More Fraud)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="button" id="process-batch" class="btn btn-primary btn-lg mt-3">Process & Predict</button>
+                        </form>
+                    </div>
+
+                    <!-- Sample cases tab -->
+                    <div class="tab-pane fade" id="sample" role="tabpanel">
+                        <div class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action" id="sample-legitimate">
+                                <strong>Sample Legitimate Transaction</strong>
+                                <p class="mb-1 case-description">A typical pattern for a legitimate transaction (very low fraud probability)</p>
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action" id="sample-fraud">
+                                <strong>Sample Fraudulent Transaction</strong>
+                                <p class="mb-1 case-description">A typical pattern for a fraudulent transaction (very high fraud probability)</p>
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action" id="sample-borderline">
+                                <strong>Sample Borderline Transaction</strong>
+                                <p class="mb-1 case-description">A transaction pattern that's ambiguous (moderate fraud probability)</p>
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action" id="sample-real-fraud">
+                                <strong>Real-world Fraud Example</strong>
+                                <p class="mb-1 case-description">A transaction pattern based on real fraud data</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function createInputFields() {
+            const col1 = document.getElementById('col1');
+            const col2 = document.getElementById('col2');
+            const col3 = document.getElementById('col3');
+            col1.innerHTML = '';
+            col2.innerHTML = '';
+            col3.innerHTML = '';
+
+            for (let i = 0; i < 30; i++) {
+                const div = document.createElement('div');
+                div.className = 'form-group';
+                div.innerHTML = `
+                    <label for="feature_${i}">Feature ${i+1} (V${i+1})</label>
+                    <input type="number" step="any" class="form-control" id="feature_${i}" name="feature_${i}" required>
+                `;
+                if (i < 10) col1.appendChild(div);
+                else if (i < 20) col2.appendChild(div);
+                else col3.appendChild(div);
+            }
+        }
+
+        document.getElementById('process-batch').addEventListener('click', function () {
+            const batchText = document.getElementById('batch-input').value;
+            const hiddenContainer = document.getElementById('batch-hidden-inputs');
+            hiddenContainer.innerHTML = '';
+            const values = batchText.split(',').map(val => val.trim());
+
+            for (let i = 0; i < values.length && i < 30; i++) {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = `feature_${i}`;
+                input.value = values[i];
+                hiddenContainer.appendChild(input);
+            }
+
+            document.getElementById('batch-form').submit();
+        });
+
+        const legitimateTransaction = [0.32, 0.43, 0.29, -0.15, 0.08, 0.22, -0.37, 0.06, 0.13, -0.05, -0.18, 0.01, -0.12, 0.2, 0.05, -0.09, 0.04, 0.17, 0.11, -0.23, 0.16, 0.1, 0.07, 0.02, -0.16, 0.14, -0.08, 0.19, 0.11, 0.08];
+        const fraudulentTransaction = [-10.16, 8.28, -4.34, 6.49, 3.85, -2.53, 1.39, -0.31, -8.2, 1.28, 5.12, 0.77, 4.76, -5.18, 3.56, 2.91, -6.23, 5.34, -2.37, 1.98, 0.73, -1.45, 2.87, -3.21, 4.11, -2.56, 1.84, -3.29, 2.75, -3.54];
+        const borderlineTransaction = [-1.2, 0.47, -0.65, 1.21, 0.83, -1.35, 0.38, -0.42, -0.39, 0.56, 1.02, 0.17, 0.88, -0.93, 0.76, 0.51, -1.17, 0.89, -0.55, 0.47, 0.23, -0.35, 0.63, -0.71, 0.92, -0.66, 0.45, -0.78, 0.31, -0.52];
+        const realWorldFraud = [-15.24, 12.83, -7.16, 5.34, 8.76, -3.87, 2.19, -9.45, -10.32, 3.56, 6.78, 1.23, 7.65, -8.90, 5.43, 4.32, -8.67, 9.54, -4.21, 3.65, 1.98, -3.76, 5.87, -6.54, 8.32, -4.56, 3.21, -7.84, 5.86, -9.32];
+
+        function fillFormWithSample(sampleData) {
+            for (let i = 0; i < sampleData.length && i < 30; i++) {
+                document.getElementById(`feature_${i}`).value = sampleData[i];
+            }
+        }
+
+        document.getElementById('sample-legitimate').addEventListener('click', function () {
+            fillFormWithSample(legitimateTransaction);
+            document.getElementById('individual-tab').click();
+        });
+
+        document.getElementById('sample-fraud').addEventListener('click', function () {
+            fillFormWithSample(fraudulentTransaction);
+            document.getElementById('individual-tab').click();
+        });
+
+        document.getElementById('sample-borderline').addEventListener('click', function () {
+            fillFormWithSample(borderlineTransaction);
+            document.getElementById('individual-tab').click();
+        });
+
+        document.getElementById('sample-real-fraud').addEventListener('click', function () {
+            fillFormWithSample(realWorldFraud);
+            document.getElementById('individual-tab').click();
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            createInputFields();
+            document.getElementById('batch-input').placeholder =
+                legitimateTransaction.slice(0, 10).join(', ') + ', ... (30 values total)';
+        });
+    </script>
+</body>
+</html>

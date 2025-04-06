@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Detection Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .result-card {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .fraud-high {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+        .fraud-medium {
+            background-color: #fff3cd;
+            border-color: #ffeeba;
+        }
+        .fraud-low {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+        .probability-container {
+            margin-bottom: 20px;
+        }
+        .threshold-info {
+            border-top: 1px solid #dee2e6;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <h1 class="text-center mb-4">Transaction Analysis Result</h1>
+        
+        {% set fraud_pct = result.fraud_probability * 100 %}
+        {% set adjusted_fraud_pct = result.adjusted_fraud_probability * 100 %}
+        
+        <div class="card result-card 
+            {% if result.prediction == 1 %}fraud-high
+            {% elif adjusted_fraud_pct > 25 %}fraud-medium
+            {% else %}fraud-low{% endif %}">
+            <div class="card-header">
+                <h4 class="mb-0">
+                    {% if result.prediction == 1 %}
+                        <i class="fa fa-exclamation-triangle"></i> Fraudulent Transaction Detected
+                    {% else %}
+                        <i class="fa fa-check-circle"></i> Legitimate Transaction
+                    {% endif %}
+                </h4>
+            </div>
+            <div class="card-body">
+                <!-- Original Probabilities -->
+                <div class="probability-container">
+                    <h5>Original Model Prediction</h5>
+                    <div class="progress" style="height: 25px;">
+                        <div class="progress-bar bg-danger" role="progressbar" 
+                             style="width: {{ fraud_pct }}%;" 
+                             aria-valuenow="{{ fraud_pct }}" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                            Fraud {{ "%.2f"|format(fraud_pct) }}%
+                        </div>
+                        <div class="progress-bar bg-success" role="progressbar" 
+                             style="width: {{ result.legitimate_probability * 100 }}%;" 
+                             aria-valuenow="{{ result.legitimate_probability * 100 }}" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                            Legitimate {{ "%.2f"|format(result.legitimate_probability * 100) }}%
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Adjusted Probabilities -->
+                <div class="probability-container">
+                    <h5>Adjusted Probability (x{{ result.adjustment_factor }})</h5>
+                    <div class="progress" style="height: 25px;">
+                        <div class="progress-bar bg-danger" role="progressbar" 
+                             style="width: {{ adjusted_fraud_pct }}%;" 
+                             aria-valuenow="{{ adjusted_fraud_pct }}" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                            Fraud {{ "%.2f"|format(adjusted_fraud_pct) }}%
+                        </div>
+                        <div class="progress-bar bg-success" role="progressbar" 
+                             style="width: {{ (1 - result.adjusted_fraud_probability) * 100 }}%;" 
+                             aria-valuenow="{{ (1 - result.adjusted_fraud_probability) * 100 }}" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                            Legitimate {{ "%.2f"|format((1 - result.adjusted_fraud_probability) * 100) }}%
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="threshold-info">
+                    <h5>Detection Settings</h5>
+                    <p>
+                        <strong>Threshold Used:</strong> {{ "%.3f"|format(result.threshold_used) }} 
+                        ({{ result.threshold_key }})
+                    </p>
+                    {% if result.threshold_descriptions and result.threshold_key in result.threshold_descriptions %}
+                    <p>
+                        <em>{{ result.threshold_descriptions[result.threshold_key] }}</em>
+                    </p>
+                    {% endif %}
+                </div>
+                
+                <div class="mt-4">
+                    <h5>Interpretation</h5>
+                    <p>
+                        {% if result.prediction == 1 %}
+                            This transaction has been <strong>identified as fraudulent</strong>.
+                            {% if fraud_pct < 10 and adjusted_fraud_pct >= result.threshold_used * 100 %}
+                                The raw fraud probability is low ({{ "%.2f"|format(fraud_pct) }}%), but our 
+                                sensitivity-enhanced model flagged suspicious patterns.
+                            {% else %}
+                                The fraud probability is {{ "%.2f"|format(fraud_pct) }}%, which exceeds
+                                the threshold of {{ "%.2f"|format(result.threshold_used * 100) }}%.
+                            {% endif %}
+                        {% else %}
+                            This transaction appears to be <strong>legitimate</strong>.
+                            {% if adjusted_fraud_pct > 20 %}
+                                However, it shows some unusual patterns. The adjusted fraud probability 
+                                ({{ "%.2f"|format(adjusted_fraud_pct) }}%) indicates some risk, though 
+                                below the threshold of {{ "%.2f"|format(result.threshold_used * 100) }}%.
+                            {% else %}
+                                The fraud probability is low ({{ "%.2f"|format(fraud_pct) }}%), well below
+                                the threshold of {{ "%.2f"|format(result.threshold_used * 100) }}%.
+                            {% endif %}
+                        {% endif %}
+                    </p>
+                </div>
+                
+                <div class="mt-3 small text-muted">
+                    <p>Transaction ID: {{ result.transaction_id }}</p>
+                    <p>Feature Count: {{ result.feature_count.original }} 
+                       {% if result.feature_count.original != result.feature_count.padded_to %}
+                       (padded to {{ result.feature_count.padded_to }})
+                       {% endif %}
+                    </p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="/" class="btn btn-primary">Analyze Another Transaction</a>
+                {% if result.prediction == 1 %}
+                <a href="#" class="btn btn-outline-danger float-right">Report False Positive</a>
+                {% else %}
+                <a href="#" class="btn btn-outline-warning float-right">Report False Negative</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+</body>
+</html>
