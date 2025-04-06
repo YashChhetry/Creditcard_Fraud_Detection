@@ -1,6 +1,3 @@
-Here’s your `README.md` content formatted in **Markdown**—ready to copy-paste directly into your GitHub project:
-
----
 
 # 💳 Credit Card Fraud Detection System
 
